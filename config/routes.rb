@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   root 'chatroom#index'
   get 'login', to: 'sessions#new'
-  post 'login', to: 'sessions#login'
+  post 'login' => 'sessions#create'
+  delete 'logout' => 'sessions#destroy'
 end
